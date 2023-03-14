@@ -15,6 +15,8 @@
  * $connection = new Mongo($connectionUrl, array('username' => $username, 'password' => $password));
  */ 
 $connection = new MongoClient();
+$connection = new MongoClient( "mongodb://mongo.com" ); // connect to a remote host (default port: 27017)
+$connection = new MongoClient( "mongodb://mongo.com:65432" ); // connect to a remote host at a given port
 
 /**
  * Select database named "test"
